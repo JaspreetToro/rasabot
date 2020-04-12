@@ -8,10 +8,19 @@ intents:
   - bot_challenge
   - inform
   - search_provider
+  - thanks
 
 entities: 
   - location
   - facility_type
+
+slot:
+  location:
+    type: text
+  facility_type:
+    type: text
+  address: 
+    type: unfeaturized
 
 actions:
   - utter_greet
@@ -49,6 +58,7 @@ responses:
 
   utter_ask_location:
     - text: "Can you provide your location please?"
+    - text: To find the nearest {facility_type} I need your address.
 
 
 session_config:
